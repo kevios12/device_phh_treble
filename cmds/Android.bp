@@ -11,18 +11,6 @@ cc_binary {
 }
 
 cc_binary {
-	name: "op-fp",
-	srcs: [
-		"op-fp.cpp",
-	],
-	shared_libs: [
-		"vendor.oneplus.fingerprint.extension@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
 	name: "uevent",
 	srcs: [
 		"uevent.cpp",
@@ -35,57 +23,6 @@ cc_binary {
 		"simg2img_simple.cpp",
 	],
 	host_supported: true,
-}
-
-cc_binary {
-	name: "vibrator-lge",
-	srcs: [
-		"vibrator-lge.cpp",
-	],
-	shared_libs: [
-		"vendor.lge.hardware.vibrator@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "mtk-sms-fwk-ready",
-	srcs: [
-		"mtk-sms-fwk-ready.cpp",
-	],
-	shared_libs: [
-		"vendor.mediatek.hardware.radio@2.6",
-		"libutils",
-		"libhidlbase",
-	],
-	init_rc: [
-		"mtk-sms-fwk-ready.rc"
-	],
-}
-
-cc_binary {
-	name: "xiaomi-display-feature",
-	srcs: [
-		"xiaomi-display-feature.cpp",
-	],
-	shared_libs: [
-		"vendor.xiaomi.hardware.displayfeature@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "xiaomi-fp",
-	srcs: [
-		"xiaomi-fp.cpp",
-	],
-	shared_libs: [
-		"vendor.xiaomi.hardware.fingerprintextension@1.0",
-		"libutils",
-		"libhidlbase",
-	],
 }
 
 cc_binary {
@@ -113,30 +50,6 @@ cc_binary {
 }
 
 cc_binary {
-	name: "xiaomi-motor",
-	srcs: [
-		"xiaomi-motor.cpp",
-	],
-	shared_libs: [
-		"vendor.xiaomi.hardware.motor@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "oneplus-motor",
-	srcs: [
-		"oneplus-motor.cpp",
-	],
-	shared_libs: [
-		"vendor.oneplus.hardware.motorcontrol@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
 	name: "persistprops",
 	srcs: [
 		"persistent_properties.proto",
@@ -149,25 +62,6 @@ cc_binary {
 	},
 	static_libs: [
 		"libprotobuf-cpp-lite"
-	],
-}
-
-cc_binary {
-	name: "lightsctl-huawei",
-	srcs: [
-		"lightsctl-huawei.cpp",
-	],
-	shared_libs: [
-		"vendor.huawei.hardware.light@2.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "asus-motor",
-	srcs: [
-		"asus-motor.cpp",
 	],
 }
 
@@ -193,23 +87,6 @@ cc_binary {
 		"vendor.samsung.hardware.camera.provider@3.0",
 		"libutils",
 		"libhidlbase",
-	],
-}
-
-cc_binary {
-	name: "oplus-alert-slider",
-	srcs: [
-		"oplus-alert-slider.cpp",
-	],
-	init_rc: [
-		"oplus-alert-slider.rc",
-	],
-}
-
-cc_binary {
-	name: "xiaomi-touch",
-	srcs: [
-		"xiaomi-touch.cpp",
 	],
 }
 
@@ -283,18 +160,6 @@ cc_binary {
 }
 
 cc_binary {
-	name: "mtk-power",
-	srcs: [
-		"mtk-power.cpp",
-	],
-	shared_libs: [
-		"vendor.mediatek.hardware.mtkpower@1.0",
-		"libutils",
-		"libhidlbase",
-	],
-}
-
-cc_binary {
 	name: "evgrab",
 	srcs: [
 		"evgrab.cpp",
@@ -311,17 +176,5 @@ cc_binary {
 	name: "re-libged_sys",
 	srcs: [
 		"re-libged_sys.cpp",
-	],
-}
-
-cc_binary {
-	name: "agold-cmd",
-	srcs: [
-		"agold-cmd.cpp",
-	],
-	shared_libs: [
-        "vendor.mediatek.hardware.agolddaemon-V1-cpp",
-		"libutils",
-		"libbinder",
 	],
 }
